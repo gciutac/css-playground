@@ -1,0 +1,125 @@
+:root {
+    --sensor-size: 25vw;
+    --sensor-border: 1px;
+    --sensor-color: #a8a8a8;
+    --main-color: rgb(92, 168, 255);
+    --secondary-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+/* SENSOR */
+
+.sensor {
+    margin: 1rem;
+    width: var(--sensor-size);
+    height: var(--sensor-size);
+    border: var(--sensor-border) solid var(--sensor-color);
+    border-radius: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    align-items: center;
+    -webkit-box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
+    -moz-box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
+    box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
+    transition: all 0.3s ease;
+}
+
+.sensor a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.sensor:hover {
+    transform: scale(1.02);
+}
+
+.sensor .top {
+    font-size: 0.7rem;
+    color: var(--secondary-color);
+}
+
+.sensor .bottom {
+    font-size: 0.8rem;
+    padding-bottom: 0.2rem;
+    color: var(--secondary-color);
+}
+
+.sensor .top a:hover {
+    font-size: 0.7rem;
+    color: var(--main-color);
+}
+
+/* Temp */
+
+.sensor.temp .main .tv {
+    font-size: 2.7rem;
+    border-bottom: 1px solid var(--sensor-color);
+}
+
+.sensor.temp .main .tv:after {
+    content: 'C';
+    font-size: 30%;
+    position: absolute;
+}
+
+.sensor.temp .main .hv {
+    font-size: 2.7rem;
+}
+
+.sensor.temp .main .hv:after {
+    content: '%';
+    font-size: 30%;
+    position: absolute;
+}
+
+/* Relay */
+
+.sensor.relay .main {
+    font-size: 4.5rem;
+    margin-top: 0.9rem;
+}
+
+.sensor.relay .main a {
+    color: var(--sensor-color);
+}
+
+.sensor.relay .main a:hover {
+    color: var(--main-color);
+}
+
+/* RBG */
+
+.sensor.rgb .main {
+    font-size: 2.3rem;
+    margin: 0.5rem;
+}
+
+.sensor.rgb .main .red {
+    text-align: center;
+}
+
+.sensor.rgb .main .green, .sensor.rgb .main .blue {
+    display: inline;
+}
+
+.sensor.rgb .main .red a:hover {
+    color: red;
+}
+
+.sensor.rgb .main .green a:hover {
+    color: green;
+}
+
+.sensor.rgb .main .blue a:hover {
+    color: blue;
+}
