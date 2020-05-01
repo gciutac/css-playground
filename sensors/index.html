@@ -19,14 +19,14 @@
         <div class="menu"><i class="fas fa-bars"></i></div>
         <div class="body">
           <div class="main">
-            <div class="tv">25.5</div>
-            <div class="hv">50.0</div>
+            <div class="tv" th:text="${data.val1}">00.0</div>
+            <div class="hv" th:text="${data.val2}">00.0</div>
           </div>
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom">
-        LivingRoom
+      <div class="bottom" th:text="${data.name}">
+        SensorName
       </div>
     </div>
 
@@ -35,13 +35,15 @@
         <div class="menu"><i class="fas fa-bars"></i></div>
         <div class="body">
           <div class="main">
-            <a href=""><i class="fas fa-power-off"></i></a>
+            <a class="device-control" href=""
+              ><i th:id="${data.id}" class="fas fa-power-off"></i
+            ></a>
           </div>
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom">
-        LivingRoom
+      <div class="bottom" th:text="${data.name}">
+        SensorName
       </div>
     </div>
 
@@ -64,7 +66,7 @@
       </div>
       <div class="delim"></div>
       <div class="bottom">
-        LivingRoom
+        SensorName
       </div>
     </div>
   </body>

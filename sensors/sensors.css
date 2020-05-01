@@ -13,11 +13,6 @@
   box-sizing: border-box;
 }
 
-body {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 /* SENSOR */
 .sensor a {
   text-decoration: none;
@@ -39,6 +34,8 @@ body {
   box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
   transition: all 0.3s ease;
   overflow: hidden;
+  font-family: "Times New Roman", Times, serif;
+  line-height: normal;
 }
 
 .sensor:hover {
@@ -84,9 +81,10 @@ body {
 }
 
 .sensor .bottom {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   padding-bottom: 0.2rem;
   color: var(--secondary-color);
+  text-transform: uppercase;
 }
 
 .sensor .top .menu:hover {
@@ -100,7 +98,7 @@ body {
 }
 
 .sensor .delim {
-  width: 75%;
+  width: 70%;
   height: 3px;
   background-color: var(--sensor-color);
 }
