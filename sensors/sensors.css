@@ -2,8 +2,8 @@
   --sensor-size: 180px;
   --sensor-border: 1px;
   --sensor-color: #a8a8a8;
-  --main-color: rgb(92, 168, 255);
-  --secondary-color: #333;
+  --primary-color: #17a2b8;
+  --color-dark: #333;
   --bg-light: rgb(219, 219, 219);
 }
 
@@ -16,7 +16,7 @@
 /* SENSOR */
 .sensor a {
   text-decoration: none;
-  color: var(--secondary-color);
+  color: var(--color-dark);
 }
 
 .sensor {
@@ -83,17 +83,17 @@
 .sensor .bottom {
   font-size: 0.7rem;
   padding-bottom: 0.2rem;
-  color: var(--secondary-color);
+  color: var(--color-dark);
   text-transform: uppercase;
 }
 
 .sensor .top .menu:hover {
-  color: var(--main-color);
+  color: var(--primary-color);
 }
 
 .sensor .top .menu:hover + .body:after {
   font-size: 0.7rem;
-  color: var(--main-color);
+  color: var(--primary-color);
   transform: scale(3) translateX(0) translateY(0) rotate(0);
 }
 
@@ -138,7 +138,7 @@
 }
 
 .sensor.relay .main a:hover {
-  color: var(--main-color);
+  color: var(--primary-color);
 }
 
 /* RBG */
