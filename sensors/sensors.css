@@ -1,5 +1,5 @@
 :root {
-  --sensor-size: 180px;
+  --sensor-size: 10rem;
   --sensor-border: 1px;
   --sensor-color: #a8a8a8;
   --primary-color: #17a2b8;
@@ -20,7 +20,7 @@
 }
 
 .sensor {
-  margin: 1rem;
+  margin: 0.7rem;
   width: var(--sensor-size);
   height: var(--sensor-size);
   border: var(--sensor-border) solid var(--sensor-color);
@@ -82,7 +82,7 @@
 
 .sensor .bottom {
   font-size: 0.7rem;
-  padding-bottom: 0.2rem;
+  padding-bottom: 0.9rem;
   color: var(--color-dark);
   text-transform: uppercase;
 }
