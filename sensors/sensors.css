@@ -5,6 +5,7 @@
   --primary-color: #17a2b8;
   --color-dark: #333;
   --bg-light: rgb(219, 219, 219);
+  --secondary-color: #ffa759;
 }
 
 * {
@@ -74,7 +75,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgb(153, 255, 204);
+  background-color: var(--secondary-color);
   transform: scale(3) translateX(0) translateY(-75%) rotate(0);
   transition: transform 1s ease;
   opacity: 0.9;
