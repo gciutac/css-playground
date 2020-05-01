@@ -1,125 +1,172 @@
 :root {
-    --sensor-size: 25vw;
-    --sensor-border: 1px;
-    --sensor-color: #a8a8a8;
-    --main-color: rgb(92, 168, 255);
-    --secondary-color: #333;
+  --sensor-size: 180px;
+  --sensor-border: 1px;
+  --sensor-color: #a8a8a8;
+  --main-color: rgb(92, 168, 255);
+  --secondary-color: #333;
+  --bg-light: rgb(219, 219, 219);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    display: flex;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* SENSOR */
-
-.sensor {
-    margin: 1rem;
-    width: var(--sensor-size);
-    height: var(--sensor-size);
-    border: var(--sensor-border) solid var(--sensor-color);
-    border-radius: 50%;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-evenly;
-    align-items: center;
-    -webkit-box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
-    -moz-box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
-    box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
-    transition: all 0.3s ease;
+.sensor a {
+  text-decoration: none;
+  color: var(--secondary-color);
 }
 
-.sensor a {
-    text-decoration: none;
-    color: var(--secondary-color);
+.sensor {
+  margin: 1rem;
+  width: var(--sensor-size);
+  height: var(--sensor-size);
+  border: var(--sensor-border) solid var(--sensor-color);
+  border-radius: 50%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+  -webkit-box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
+  -moz-box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
+  box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
+  transition: all 0.3s ease;
+  overflow: hidden;
 }
 
 .sensor:hover {
-    transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 .sensor .top {
-    font-size: 0.7rem;
-    color: var(--secondary-color);
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.menu {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--sensor-color);
+  cursor: pointer;
+}
+
+.sensor .top .body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sensor Overlay */
+.body:after {
+  position: absolute;
+  content: "Online";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(153, 255, 204);
+  transform: scale(3) translateX(0) translateY(-75%) rotate(0);
+  transition: transform 1s ease;
+  opacity: 0.9;
 }
 
 .sensor .bottom {
-    font-size: 0.8rem;
-    padding-bottom: 0.2rem;
-    color: var(--secondary-color);
+  font-size: 0.8rem;
+  padding-bottom: 0.2rem;
+  color: var(--secondary-color);
 }
 
-.sensor .top a:hover {
-    font-size: 0.7rem;
-    color: var(--main-color);
+.sensor .top .menu:hover {
+  color: var(--main-color);
+}
+
+.sensor .top .menu:hover + .body:after {
+  font-size: 0.7rem;
+  color: var(--main-color);
+  transform: scale(3) translateX(0) translateY(0) rotate(0);
+}
+
+.sensor .delim {
+  width: 75%;
+  height: 3px;
+  background-color: var(--sensor-color);
 }
 
 /* Temp */
 
 .sensor.temp .main .tv {
-    font-size: 2.7rem;
-    border-bottom: 1px solid var(--sensor-color);
+  font-size: 2.7rem;
+  border-bottom: 1px solid var(--sensor-color);
 }
 
 .sensor.temp .main .tv:after {
-    content: 'C';
-    font-size: 30%;
-    position: absolute;
+  content: "C";
+  font-size: 30%;
+  position: absolute;
 }
 
 .sensor.temp .main .hv {
-    font-size: 2.7rem;
+  font-size: 2.7rem;
 }
 
 .sensor.temp .main .hv:after {
-    content: '%';
-    font-size: 30%;
-    position: absolute;
+  content: "%";
+  font-size: 30%;
+  position: absolute;
 }
 
 /* Relay */
 
 .sensor.relay .main {
-    font-size: 4.5rem;
-    margin-top: 0.9rem;
+  font-size: 4.5rem;
+  margin-top: 0.9rem;
 }
 
 .sensor.relay .main a {
-    color: var(--sensor-color);
+  color: var(--sensor-color);
 }
 
 .sensor.relay .main a:hover {
-    color: var(--main-color);
+  color: var(--main-color);
 }
 
 /* RBG */
 
 .sensor.rgb .main {
-    font-size: 2.3rem;
-    margin: 0.5rem;
+  font-size: 2.3rem;
+  margin: 0.5rem;
 }
 
 .sensor.rgb .main .red {
-    text-align: center;
+  text-align: center;
 }
 
-.sensor.rgb .main .green, .sensor.rgb .main .blue {
-    display: inline;
+.sensor.rgb .main .green,
+.sensor.rgb .main .blue {
+  display: inline;
 }
 
 .sensor.rgb .main .red a:hover {
-    color: red;
+  color: red;
 }
 
 .sensor.rgb .main .green a:hover {
-    color: green;
+  color: green;
 }
 
 .sensor.rgb .main .blue a:hover {
-    color: blue;
+  color: blue;
 }
