@@ -6,6 +6,7 @@
   --color-dark: #333;
   --bg-light: rgb(219, 219, 219);
   --secondary-color: #ffa759;
+  --secondary-faded: #ffa7597d;
 }
 
 * {
@@ -15,6 +16,7 @@
 }
 
 /* SENSOR */
+
 .sensor a {
   text-decoration: none;
   color: var(--color-dark);
@@ -68,6 +70,7 @@
 }
 
 /* Sensor Overlay */
+
 .body:after {
   position: absolute;
   content: "Online";
@@ -77,7 +80,7 @@
   width: 100%;
   background-color: var(--secondary-color);
   transform: scale(3) translateX(0) translateY(-75%) rotate(0);
-  transition: transform 1s ease;
+  transition: transform 0.5s ease;
   opacity: 0.9;
 }
 
@@ -88,20 +91,43 @@
   text-transform: uppercase;
 }
 
+.sensor .body .options {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 81%;
+}
+
 .sensor .top .menu:hover {
   color: var(--primary-color);
 }
 
-.sensor .top .menu:hover + .body:after {
+.sensor .top .menu:hover+.body:after {
   font-size: 0.7rem;
   color: var(--primary-color);
   transform: scale(3) translateX(0) translateY(0) rotate(0);
 }
 
+.sensor .top .menu:hover+.body .options {
+  opacity: 1;
+  z-index: 1;
+}
+
 .sensor .delim {
   width: 70%;
   height: 3px;
-  background-color: var(--sensor-color);
+  background-color: var(--secondary-faded);
+  border-radius: 50%;
 }
 
 /* Temp */
@@ -153,8 +179,7 @@
   text-align: center;
 }
 
-.sensor.rgb .main .green,
-.sensor.rgb .main .blue {
+.sensor.rgb .main .green, .sensor.rgb .main .blue {
   display: inline;
 }
 
@@ -168,4 +193,105 @@
 
 .sensor.rgb .main .blue a:hover {
   color: blue;
+}
+
+/* Button */
+
+.sensor.button .main {
+  font-size: 4.5rem;
+  margin-top: 0.9rem;
+}
+
+.sensor.button .main i {
+  color: var(--sensor-color);
+}
+
+.sensor.button .main i:hover {
+  color: var(--primary-color);
+}
+
+/* Buzzer */
+
+.sensor.buzzer .main {
+  font-size: 4.5rem;
+  margin-top: 0.9rem;
+}
+
+.sensor.buzzer .main i {
+  color: var(--sensor-color);
+}
+
+.sensor.buzzer .main i:hover {
+  color: var(--primary-color);
+}
+
+/* Motor */
+
+.sensor.motor .main {
+  font-size: 4.5rem;
+  margin-top: 0.9rem;
+}
+
+.sensor.motor .main i {
+  color: var(--sensor-color);
+}
+
+.sensor.motor .main i:hover {
+  color: var(--primary-color);
+}
+
+/* IR */
+
+.sensor.ir .main {
+  font-size: 4.5rem;
+  margin-top: 0.9rem;
+}
+
+.sensor.ir .main i {
+  color: var(--sensor-color);
+}
+
+.sensor.ir .main i:hover {
+  color: var(--primary-color);
+}
+
+/* Matrix */
+
+.sensor.matrix .main {
+  font-size: 4.5rem;
+  margin-top: 0.9rem;
+}
+
+.sensor.matrix .main i {
+  color: var(--sensor-color);
+}
+
+.sensor.matrix .main i:hover {
+  color: var(--primary-color);
+}
+
+/* OLED */
+
+.sensor.oled .main {
+  font-size: 4.5rem;
+  margin-top: 0.9rem;
+}
+
+.sensor.oled .main i {
+  color: var(--sensor-color);
+}
+
+.sensor.oled .main i:hover {
+  color: var(--primary-color);
+}
+
+/* Barometer */
+
+.sensor.barometer .main .barv {
+  font-size: 2.7rem;
+  border-bottom: 1px solid var(--sensor-color);
+}
+
+.sensor.barometer .main .pha {
+  font-size: 2.7rem;
 }
