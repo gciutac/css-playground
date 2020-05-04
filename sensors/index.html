@@ -1,241 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="sensors.css" />
+    <style>
+      body {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
-  <link rel="stylesheet" href="sensors.css" />
-  <style>
-    body {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  </style>
-</head>
-
-<body>
-  <div class="sensor temp">
-    <div class="top">
-      <div class="menu"><i class="fas fa-bars"></i></div>
-      <div class="body">
-        <div class="main">
-          <div class="tv" th:text="${data.val1}">00.0</div>
-          <div class="hv" th:text="${data.val2}">00.0</div>
-        </div>
-        <div class="options">
-          <div class="device-type">TEMP</div>
-          <div class="device-id">LIVING1</div>
-          <div class="last-update">Last Update: 1min ago</div>
-          <div class="last-update">Status: Online</div>
+  <body>
+    <div class="sensor temp">
+      <div class="top">
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <div class="body">
+          <div class="main">
+            <div class="tv" th:text="${data.val1}">00.0</div>
+            <div class="hv" th:text="${data.val2}">00.0</div>
+          </div>
+          <div class="details">
+            <div class="device-type">TEMP</div>
+            <div class="device-id">LIVING1</div>
+            <div class="last-update">Last Update: 1min ago</div>
+            <div class="last-update">Status: Online</div>
+          </div>
+          <div class="options"></div>
         </div>
       </div>
-    </div>
-    <div class="delim"></div>
-    <div class="bottom" th:text="${data.name}">
-      SensorName
-    </div>
-  </div>
-
-  <div class="sensor relay">
-    <div class="top">
-      <div class="menu"><i class="fas fa-bars"></i></div>
-      <div class="body">
-        <div class="main">
-          <a class="device-control" href=""><i th:id="${data.id}" class="fas fa-power-off"></i></a>
-        </div>
-        <div class="options">
-          <div class="device-type">RELAY</div>
-          <div class="device-id">LIVING2</div>
-          <div class="last-update">Last Update: 1min ago</div>
-          <div class="last-update">Status: Online</div>
-        </div>
+      <div class="delim"></div>
+      <div class="bottom" th:text="${data.name}">
+        SensorName
       </div>
     </div>
-    <div class="delim"></div>
-    <div class="bottom" th:text="${data.name}">
-      SensorName
-    </div>
-  </div>
 
-  <div class="sensor rgb">
-    <div class="top">
-      <div class="menu"><i class="fas fa-bars"></i></div>
-      <div class="body">
-        <div class="main">
-          <div class="red">
-            <a href=""><i class="far fa-circle"></i></a>
+    <div class="sensor relay">
+      <div class="top">
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <div class="body">
+          <div class="main">
+            <a class="device-control" href=""
+              ><i th:id="${data.id}" class="fas fa-power-off"></i
+            ></a>
           </div>
-          <div class="green">
-            <a href=""><i class="far fa-circle"></i></a>
-          </div>
-          <div class="blue">
-            <a href=""><i class="far fa-circle"></i></a>
+          <div class="details">
+            <div class="device-type">RELAY</div>
+            <div class="device-id">LIVING2</div>
+            <div class="last-update">Last Update: 1min ago</div>
+            <div class="last-update">Status: Online</div>
           </div>
         </div>
-        <div class="options">
-          <div class="device-type">RGB</div>
-          <div class="device-id">LIVING1</div>
-          <div class="last-update">Last Update: 1min ago</div>
-          <div class="last-update">Status: Online</div>
-        </div>
+      </div>
+      <div class="delim"></div>
+      <div class="bottom" th:text="${data.name}">
+        SensorName
       </div>
     </div>
-    <div class="delim"></div>
-    <div class="bottom">
-      SensorName
-    </div>
-  </div>
 
-  <div class="sensor button">
-    <div class="top">
-      <div class="menu"><i class="fas fa-bars"></i></div>
-      <div class="body">
-        <div class="main">
-          <i class="device-control far fa-hand-point-up"></i>
-        </div>
-        <div class="options">
-          <div class="device-type">BUTTON</div>
-          <div class="device-id">LIVING1</div>
-          <div class="last-update">Last Update: 1min ago</div>
-          <div class="last-update">Status: Online</div>
+    <div class="sensor rgb">
+      <div class="top">
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <div class="body">
+          <div class="main">
+            <div class="red">
+              <a href=""><i class="far fa-circle"></i></a>
+            </div>
+            <div class="green">
+              <a href=""><i class="far fa-circle"></i></a>
+            </div>
+            <div class="blue">
+              <a href=""><i class="far fa-circle"></i></a>
+            </div>
+          </div>
+          <div class="details">
+            <div class="device-type">RGB</div>
+            <div class="device-id">LIVING1</div>
+            <div class="last-update">Last Update: 1min ago</div>
+            <div class="last-update">Status: Online</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="delim"></div>
-    <div class="bottom" th:text="${data.name}">
-      SensorName
-    </div>
-  </div>
-
-  <div class="sensor buzzer">
-    <div class="top">
-      <div class="menu"><i class="fas fa-bars"></i></div>
-      <div class="body">
-        <div class="main">
-          <a class="device-control" href=""><i th:id="${data.id}" class="fab fa-itunes-note"></i></a>
-        </div>
-        <div class="options">
-          <div class="device-type">BUTTON</div>
-          <div class="device-id">LIVING1</div>
-          <div class="last-update">Last Update: 1min ago</div>
-          <div class="last-update">Status: Online</div>
-        </div>
+      <div class="delim"></div>
+      <div class="bottom">
+        SensorName
       </div>
     </div>
-    <div class="delim"></div>
-    <div class="bottom" th:text="${data.name}">
-      SensorName
-    </div>
-  </div>
 
-  <div class="sensor motor">
-    <div class="top">
-      <div class="menu"><i class="fas fa-bars"></i></div>
-      <div class="body">
-        <div class="main">
-          <a class="device-control" href=""><i th:id="${data.id}" class="fas fa-cog"></i></a>
-        </div>
-        <div class="options">
-          <div class="device-type">BUTTON</div>
-          <div class="device-id">LIVING1</div>
-          <div class="last-update">Last Update: 1min ago</div>
-          <div class="last-update">Status: Online</div>
+    <div class="sensor button">
+      <div class="top">
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <div class="body">
+          <div class="main">
+            <i class="device-control far fa-hand-point-up"></i>
+          </div>
+          <div class="details">
+            <div class="device-type">BUTTON</div>
+            <div class="device-id">LIVING1</div>
+            <div class="last-update">Last Update: 1min ago</div>
+            <div class="last-update">Status: Online</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="delim"></div>
-    <div class="bottom" th:text="${data.name}">
-      SensorName
-    </div>
-  </div>
-
-  <div class="sensor ir">
-    <div class="top">
-      <div class="menu"><i class="fas fa-bars"></i></div>
-      <div class="body">
-        <div class="main">
-          <a class="device-control" href=""><i th:id="${data.id}" class="fas fa-broadcast-tower"></i></a>
-        </div>
-        <div class="options">
-          <div class="device-type">BUTTON</div>
-          <div class="device-id">LIVING1</div>
-          <div class="last-update">Last Update: 1min ago</div>
-          <div class="last-update">Status: Online</div>
-        </div>
+      <div class="delim"></div>
+      <div class="bottom" th:text="${data.name}">
+        SensorName
       </div>
     </div>
-    <div class="delim"></div>
-    <div class="bottom" th:text="${data.name}">
-      SensorName
-    </div>
-  </div>
 
-  <div class="sensor matrix">
-    <div class="top">
-      <div class="menu"><i class="fas fa-bars"></i></div>
-      <div class="body">
-        <div class="main">
-          <a class="device-control" href=""><i th:id="${data.id}" class="fab fa-buromobelexperte"></i></a>
-        </div>
-        <div class="options">
-          <div class="device-type">BUTTON</div>
-          <div class="device-id">LIVING1</div>
-          <div class="last-update">Last Update: 1min ago</div>
-          <div class="last-update">Status: Online</div>
+    <div class="sensor buzzer">
+      <div class="top">
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <div class="body">
+          <div class="main">
+            <a class="device-control" href=""
+              ><i th:id="${data.id}" class="fab fa-itunes-note"></i
+            ></a>
+          </div>
+          <div class="details">
+            <div class="device-type">BUTTON</div>
+            <div class="device-id">LIVING1</div>
+            <div class="last-update">Last Update: 1min ago</div>
+            <div class="last-update">Status: Online</div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="delim"></div>
-    <div class="bottom" th:text="${data.name}">
-      SensorName
-    </div>
-  </div>
-
-  <div class="sensor oled">
-    <div class="top">
-      <div class="menu"><i class="fas fa-bars"></i></div>
-      <div class="body">
-        <div class="main">
-          <a class="device-control" href=""><i th:id="${data.id}" class="fas fa-tv"></i></a>
-        </div>
-        <div class="options">
-          <div class="device-type">BUTTON</div>
-          <div class="device-id">LIVING1</div>
-          <div class="last-update">Last Update: 1min ago</div>
-          <div class="last-update">Status: Online</div>
-        </div>
+      <div class="delim"></div>
+      <div class="bottom" th:text="${data.name}">
+        SensorName
       </div>
     </div>
-    <div class="delim"></div>
-    <div class="bottom" th:text="${data.name}">
-      SensorName
-    </div>
-  </div>
 
-  <div class="sensor barometer">
-    <div class="top">
-      <div class="menu"><i class="fas fa-bars"></i></div>
-      <div class="body">
-        <div class="main">
-          <div class="barv" th:text="${data.val1}">00.0</div>
-          <div class="pha" th:text="${data.val1}">pHa</div>
-        </div>
-        <div class="options">
-          <div class="device-type">BUTTON</div>
-          <div class="device-id">LIVING1</div>
-          <div class="last-update">Last Update: 1min ago</div>
-          <div class="last-update">Status: Online</div>
+    <div class="sensor motor">
+      <div class="top">
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <div class="body device-with-options">
+          <div class="main">
+            <i th:id="${data.id}" class="fas fa-cog"></i>
+          </div>
+          <div class="details">
+            <div class="device-type">BUTTON</div>
+            <div class="device-id">LIVING1</div>
+            <div class="last-update">Last Update: 1min ago</div>
+            <div class="last-update">Status: Online</div>
+          </div>
+          <div class="options">
+            <div class="device-type">BUTTON</div>
+          </div>
         </div>
       </div>
+      <div class="delim"></div>
+      <div class="bottom" th:text="${data.name}">
+        SensorName
+      </div>
     </div>
-    <div class="delim"></div>
-    <div class="bottom" th:text="${data.name}">
-      SensorName
-    </div>
-  </div>
-</body>
 
+    <div class="sensor ir">
+      <div class="top">
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <div class="body device-with-options">
+          <div class="main">
+            <i th:id="${data.id}" class="fas fa-broadcast-tower"></i>
+          </div>
+          <div class="details">
+            <div class="device-type">BUTTON</div>
+            <div class="device-id">LIVING1</div>
+            <div class="last-update">Last Update: 1min ago</div>
+            <div class="last-update">Status: Online</div>
+          </div>
+          <div class="options">
+            <div class="device-type">BUTTON</div>
+          </div>
+        </div>
+      </div>
+      <div class="delim"></div>
+      <div class="bottom" th:text="${data.name}">
+        SensorName
+      </div>
+    </div>
+
+    <div class="sensor matrix">
+      <div class="top">
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <div class="body device-with-options">
+          <div class="main">
+            <i th:id="${data.id}" class="fab fa-buromobelexperte"></i>
+          </div>
+          <div class="details">
+            <div class="device-type">BUTTON</div>
+            <div class="device-id">LIVING1</div>
+            <div class="last-update">Last Update: 1min ago</div>
+            <div class="last-update">Status: Online</div>
+          </div>
+          <div class="options">
+            <div class="device-type">BUTTON</div>
+          </div>
+        </div>
+      </div>
+      <div class="delim"></div>
+      <div class="bottom" th:text="${data.name}">
+        SensorName
+      </div>
+    </div>
+
+    <div class="sensor oled">
+      <div class="top">
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <div class="body device-with-options">
+          <div class="main">
+            <i th:id="${data.id}" class="fas fa-tv"></i>
+          </div>
+          <div class="details">
+            <div class="device-type">BUTTON</div>
+            <div class="device-id">LIVING1</div>
+            <div class="last-update">Last Update: 1min ago</div>
+            <div class="last-update">Status: Online</div>
+          </div>
+          <div class="options">
+            <div class="device-type">BUTTON</div>
+          </div>
+        </div>
+      </div>
+      <div class="delim"></div>
+      <div class="bottom" th:text="${data.name}">
+        SensorName
+      </div>
+    </div>
+
+    <div class="sensor barometer">
+      <div class="top">
+        <div class="menu"><i class="fas fa-bars"></i></div>
+        <div class="body">
+          <div class="main">
+            <div class="barv" th:text="${data.val1}">00.0</div>
+            <div class="pha" th:text="${data.val1}">pHa</div>
+          </div>
+          <div class="details">
+            <div class="device-type">BUTTON</div>
+            <div class="device-id">LIVING1</div>
+            <div class="last-update">Last Update: 1min ago</div>
+            <div class="last-update">Status: Online</div>
+          </div>
+        </div>
+      </div>
+      <div class="delim"></div>
+      <div class="bottom" th:text="${data.name}">
+        SensorName
+      </div>
+    </div>
+  </body>
 </html>

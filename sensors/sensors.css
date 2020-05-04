@@ -4,6 +4,7 @@
   --sensor-color: #a8a8a8;
   --primary-color: #17a2b8;
   --color-dark: #333;
+  --color-med-dark: #5d5d5d;
   --bg-light: rgb(219, 219, 219);
   --secondary-color: #ffa759;
   --secondary-faded: #ffa7597d;
@@ -35,7 +36,7 @@
   -webkit-box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
   -moz-box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
   box-shadow: inset 0px 0px 10px 3px rgba(168, 168, 168, 0.5);
-  transition: all 0.3s ease;
+  transition: scale 0.3s ease;
   overflow: hidden;
   font-family: "Times New Roman", Times, serif;
   line-height: normal;
@@ -51,6 +52,10 @@
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+}
+
+.sensor .main {
+  color: var(--color-med-dark);
 }
 
 .menu {
@@ -80,7 +85,7 @@
   width: 100%;
   background-color: var(--secondary-color);
   transform: scale(3) translateX(0) translateY(-75%) rotate(0);
-  transition: transform 0.5s ease;
+  transition: transform 1.1s ease;
   opacity: 0.9;
 }
 
@@ -91,7 +96,7 @@
   text-transform: uppercase;
 }
 
-.sensor .body .options {
+.sensor .body .details {
   position: absolute;
   top: 0;
   left: 0;
@@ -100,7 +105,7 @@
   text-align: center;
   z-index: -1;
   opacity: 0;
-  transition: opacity 0.7s ease;
+  transition: opacity 1.1s ease;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -108,17 +113,42 @@
   font-size: 81%;
 }
 
+/* Options */
+.sensor .device-with-options:hover > .options {
+  opacity: 0.9;
+  z-index: 1;
+  top: 0;
+}
+
+.sensor .body .options {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.7s ease;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 81%;
+  background-color: var(--primary-color);
+}
+
 .sensor .top .menu:hover {
   color: var(--primary-color);
 }
 
-.sensor .top .menu:hover+.body:after {
+.sensor .top .menu:hover + .body:after {
   font-size: 0.7rem;
   color: var(--primary-color);
   transform: scale(3) translateX(0) translateY(0) rotate(0);
 }
 
-.sensor .top .menu:hover+.body .options {
+.sensor .top .menu:hover + .body .details {
   opacity: 1;
   z-index: 1;
 }
@@ -179,7 +209,8 @@
   text-align: center;
 }
 
-.sensor.rgb .main .green, .sensor.rgb .main .blue {
+.sensor.rgb .main .green,
+.sensor.rgb .main .blue {
   display: inline;
 }
 
@@ -232,27 +263,11 @@
   margin-top: 0.9rem;
 }
 
-.sensor.motor .main i {
-  color: var(--sensor-color);
-}
-
-.sensor.motor .main i:hover {
-  color: var(--primary-color);
-}
-
 /* IR */
 
 .sensor.ir .main {
   font-size: 4.5rem;
   margin-top: 0.9rem;
-}
-
-.sensor.ir .main i {
-  color: var(--sensor-color);
-}
-
-.sensor.ir .main i:hover {
-  color: var(--primary-color);
 }
 
 /* Matrix */
@@ -262,27 +277,11 @@
   margin-top: 0.9rem;
 }
 
-.sensor.matrix .main i {
-  color: var(--sensor-color);
-}
-
-.sensor.matrix .main i:hover {
-  color: var(--primary-color);
-}
-
 /* OLED */
 
 .sensor.oled .main {
   font-size: 4.5rem;
   margin-top: 0.9rem;
-}
-
-.sensor.oled .main i {
-  color: var(--sensor-color);
-}
-
-.sensor.oled .main i:hover {
-  color: var(--primary-color);
 }
 
 /* Barometer */
@@ -294,4 +293,10 @@
 
 .sensor.barometer .main .pha {
   font-size: 2.7rem;
+}
+
+.sensor.barometer .main .barv:after {
+  content: "p";
+  font-size: 30%;
+  position: absolute;
 }
