@@ -194,7 +194,8 @@
   color: var(--sensor-color);
 }
 
-.sensor.relay .main a:hover {
+.sensor.relay .main a:hover,
+.power-on {
   color: var(--primary-color);
 }
 
@@ -214,16 +215,19 @@
   display: inline;
 }
 
-.sensor.rgb .main .red a:hover {
-  color: red;
+.sensor.rgb .main .red a:hover,
+.red-on {
+  color: red !important;
 }
 
-.sensor.rgb .main .green a:hover {
-  color: green;
+.sensor.rgb .main .green a:hover,
+.green-on {
+  color: green !important;
 }
 
-.sensor.rgb .main .blue a:hover {
-  color: blue;
+.sensor.rgb .main .blue a:hover,
+.blue-on {
+  color: blue !important;
 }
 
 /* Button */
@@ -285,6 +289,9 @@
 }
 
 /* Barometer */
+.sensor.barometer .main {
+  text-align: center;
+}
 
 .sensor.barometer .main .barv {
   font-size: 2.7rem;
