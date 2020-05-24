@@ -175,6 +175,10 @@
   border-radius: 50%;
 }
 
+.sensor .body .main {
+  text-align: center;
+}
+
 /* Temp */
 
 .sensor.temp .main .tv {
