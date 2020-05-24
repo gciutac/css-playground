@@ -8,6 +8,7 @@
   --bg-light: rgb(219, 219, 219);
   --secondary-color: #ffa759;
   --secondary-faded: #ffa7597d;
+  --danger-color: #dc3545;
 }
 
 * {
@@ -15,6 +16,21 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* ----------- Utils ------------- */
+.sensor-btn {
+  padding: 0 15px;
+  border: 1px solid var(--sensor-color);
+  border-radius: 10px;
+  margin: 2px 0;
+  background-color: var(--primary-color);
+  color: #fff !important;
+}
+
+.sensor-btn:hover {
+  background-color: var(--danger-color);
+}
+/* ----------- ----- ------------- */
 
 /* SENSOR */
 

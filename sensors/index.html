@@ -30,16 +30,16 @@
             <div class="hv" th:text="${data.val2}">00.0</div>
           </div>
           <div class="details">
-            <div class="device-type">TEMP</div>
-            <div class="device-id">LIVING1</div>
-            <div class="last-update"><a href="#">Reload</a></div>
-            <div class="last-update"><a href="#">Delete</a></div>
+            <div class="device-type" th:text="${data.type}">TEMP</div>
+            <div class="device-name" th:text="${data.name}">NAME</div>
+            <a class="sensor-btn" href="#">Details</a>
+            <a class="sensor-btn" href="#">Delete</a>
           </div>
           <div class="options"></div>
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom" th:text="${data.name}">
+      <div class="bottom" th:text="${data.title}">
         SensorName
       </div>
     </div>
@@ -55,15 +55,15 @@
             ></a>
           </div>
           <div class="details">
-            <div class="device-type">RELAY</div>
-            <div class="device-id">LIVING2</div>
-            <div class="last-update">Last Update: 1min ago</div>
-            <div class="last-update">Status: Online</div>
+            <div class="device-type" th:text="${data.type}">TEMP</div>
+            <div class="device-name" th:text="${data.name}">NAME</div>
+            <a class="sensor-btn" href="#">Details</a>
+            <a class="sensor-btn" href="#">Delete</a>
           </div>
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom" th:text="${data.name}">
+      <div class="bottom" th:text="${data.title}">
         SensorName
       </div>
     </div>
@@ -85,15 +85,15 @@
             </div>
           </div>
           <div class="details">
-            <div class="device-type">RGB</div>
-            <div class="device-id">LIVING1</div>
-            <div class="last-update">Last Update: 1min ago</div>
-            <div class="last-update">Status: Online</div>
+            <div class="device-type" th:text="${data.type}">TEMP</div>
+            <div class="device-name" th:text="${data.name}">NAME</div>
+            <a class="sensor-btn" href="#">Details</a>
+            <a class="sensor-btn" href="#">Delete</a>
           </div>
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom">
+      <div class="bottom" th:text="${data.title}">
         SensorName
       </div>
     </div>
@@ -107,15 +107,15 @@
             <i class="device-control far fa-hand-point-up"></i>
           </div>
           <div class="details">
-            <div class="device-type">BUTTON</div>
-            <div class="device-id">LIVING1</div>
-            <div class="last-update">Last Update: 1min ago</div>
-            <div class="last-update">Status: Online</div>
+            <div class="device-type" th:text="${data.type}">TEMP</div>
+            <div class="device-name" th:text="${data.name}">NAME</div>
+            <a class="sensor-btn" href="#">Details</a>
+            <a class="sensor-btn" href="#">Delete</a>
           </div>
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom" th:text="${data.name}">
+      <div class="bottom" th:text="${data.title}">
         SensorName
       </div>
     </div>
@@ -131,15 +131,15 @@
             ></a>
           </div>
           <div class="details">
-            <div class="device-type">BUTTON</div>
-            <div class="device-id">LIVING1</div>
-            <div class="last-update">Last Update: 1min ago</div>
-            <div class="last-update">Status: Online</div>
+            <div class="device-type" th:text="${data.type}">TEMP</div>
+            <div class="device-name" th:text="${data.name}">NAME</div>
+            <a class="sensor-btn" href="#">Details</a>
+            <a class="sensor-btn" href="#">Delete</a>
           </div>
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom" th:text="${data.name}">
+      <div class="bottom" th:text="${data.title}">
         SensorName
       </div>
     </div>
@@ -153,10 +153,10 @@
             <i th:id="${data.id}" class="fas fa-cog"></i>
           </div>
           <div class="details">
-            <div class="device-type">BUTTON</div>
-            <div class="device-id">LIVING1</div>
-            <div class="last-update">Last Update: 1min ago</div>
-            <div class="last-update">Status: Online</div>
+            <div class="device-type" th:text="${data.type}">TEMP</div>
+            <div class="device-name" th:text="${data.name}">NAME</div>
+            <a class="sensor-btn" href="#">Details</a>
+            <a class="sensor-btn" href="#">Delete</a>
           </div>
           <div class="options">
             <div class="device-type">BUTTON</div>
@@ -164,7 +164,7 @@
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom" th:text="${data.name}">
+      <div class="bottom" th:text="${data.title}">
         SensorName
       </div>
     </div>
@@ -178,10 +178,10 @@
             <i th:id="${data.id}" class="fas fa-broadcast-tower"></i>
           </div>
           <div class="details">
-            <div class="device-type">BUTTON</div>
-            <div class="device-id">LIVING1</div>
-            <div class="last-update">Last Update: 1min ago</div>
-            <div class="last-update">Status: Online</div>
+            <div class="device-type" th:text="${data.type}">TEMP</div>
+            <div class="device-name" th:text="${data.name}">NAME</div>
+            <a class="sensor-btn" href="#">Details</a>
+            <a class="sensor-btn" href="#">Delete</a>
           </div>
           <div class="options">
             <div class="device-type">BUTTON</div>
@@ -189,7 +189,7 @@
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom" th:text="${data.name}">
+      <div class="bottom" th:text="${data.title}">
         SensorName
       </div>
     </div>
@@ -203,10 +203,10 @@
             <i th:id="${data.id}" class="fab fa-buromobelexperte"></i>
           </div>
           <div class="details">
-            <div class="device-type">BUTTON</div>
-            <div class="device-id">LIVING1</div>
-            <div class="last-update">Last Update: 1min ago</div>
-            <div class="last-update">Status: Online</div>
+            <div class="device-type" th:text="${data.type}">TEMP</div>
+            <div class="device-name" th:text="${data.name}">NAME</div>
+            <a class="sensor-btn" href="#">Details</a>
+            <a class="sensor-btn" href="#">Delete</a>
           </div>
           <div class="options">
             <div class="device-type">BUTTON</div>
@@ -214,7 +214,7 @@
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom" th:text="${data.name}">
+      <div class="bottom" th:text="${data.title}">
         SensorName
       </div>
     </div>
@@ -228,10 +228,10 @@
             <i th:id="${data.id}" class="fas fa-tv"></i>
           </div>
           <div class="details">
-            <div class="device-type">BUTTON</div>
-            <div class="device-id">LIVING1</div>
-            <div class="last-update">Last Update: 1min ago</div>
-            <div class="last-update">Status: Online</div>
+            <div class="device-type" th:text="${data.type}">TEMP</div>
+            <div class="device-name" th:text="${data.name}">NAME</div>
+            <a class="sensor-btn" href="#">Details</a>
+            <a class="sensor-btn" href="#">Delete</a>
           </div>
           <div class="options">
             <div class="device-type">BUTTON</div>
@@ -239,7 +239,7 @@
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom" th:text="${data.name}">
+      <div class="bottom" th:text="${data.title}">
         SensorName
       </div>
     </div>
@@ -254,15 +254,15 @@
             <div class="pha">pHa</div>
           </div>
           <div class="details">
-            <div class="device-type">BUTTON</div>
-            <div class="device-id">LIVING1</div>
-            <div class="last-update">Last Update: 1min ago</div>
-            <div class="last-update">Status: Online</div>
+            <div class="device-type" th:text="${data.type}">TEMP</div>
+            <div class="device-name" th:text="${data.name}">NAME</div>
+            <a class="sensor-btn" href="#">Details</a>
+            <a class="sensor-btn" href="#">Delete</a>
           </div>
         </div>
       </div>
       <div class="delim"></div>
-      <div class="bottom" th:text="${data.name}">
+      <div class="bottom" th:text="${data.title}">
         SensorName
       </div>
     </div>
