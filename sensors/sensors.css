@@ -55,17 +55,24 @@
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
-}
-
-.sensor .main {
-  color: var(--color-med-dark);
+  position: relative;
 }
 
 .menu {
   text-align: center;
   font-size: 1rem;
   color: var(--sensor-color);
+}
+
+.menu.device-menu {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  width: 2rem;
+  height: 1rem;
   cursor: pointer;
+  opacity: 0;
+  z-index: 2;
 }
 
 .sensor .top .body {
@@ -87,7 +94,7 @@
   height: 100%;
   width: 100%;
   background-color: var(--secondary-color);
-  transform: scale(3) translateX(0) translateY(-75%) rotate(0);
+  transform: scale(2) translateX(0) translateY(-75%) rotate(0);
   transition: transform 1.1s ease;
   opacity: 0.9;
 }
@@ -108,7 +115,7 @@
   text-align: center;
   z-index: -1;
   opacity: 0;
-  transition: opacity 1.1s ease;
+  transition: opacity 1s ease;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -141,19 +148,24 @@
   background-color: var(--primary-color);
 }
 
-.sensor .top .menu:hover {
+.sensor .top .menu.device-menu:checked + .fas {
   color: var(--primary-color);
 }
 
-.sensor .top .menu:hover + .body:after {
+.sensor .top .menu.device-menu:checked ~ .body:after {
   font-size: 0.7rem;
   color: var(--primary-color);
-  transform: scale(3) translateX(0) translateY(0) rotate(0);
+  transform: scale(2) translateX(0) translateY(0) rotate(0);
 }
 
-.sensor .top .menu:hover + .body .details {
+.sensor .top .menu.device-menu:checked ~ .body .details {
   opacity: 1;
-  z-index: 1;
+  z-index: 2;
+}
+
+/* Disable the Options Menu in favour of Details */
+.sensor .top .menu.device-menu:checked ~ .body .options {
+  display: none;
 }
 
 .sensor .delim {

@@ -22,7 +22,8 @@
   <body>
     <div class="sensor temp">
       <div class="top">
-        <div class="menu"><i class="fas fa-bars"></i></div>
+        <input type="checkbox" class="menu device-menu" />
+        <i class="fas fa-bars menu"></i>
         <div class="body">
           <div class="main">
             <div class="tv" th:text="${data.val1}">00.0</div>
@@ -31,8 +32,8 @@
           <div class="details">
             <div class="device-type">TEMP</div>
             <div class="device-id">LIVING1</div>
-            <div class="last-update">Last Update: 1min ago</div>
-            <div class="last-update">Status: Online</div>
+            <div class="last-update"><a href="#">Reload</a></div>
+            <div class="last-update"><a href="#">Delete</a></div>
           </div>
           <div class="options"></div>
         </div>
@@ -45,7 +46,8 @@
 
     <div class="sensor relay">
       <div class="top">
-        <div class="menu"><i class="fas fa-bars"></i></div>
+        <input type="checkbox" class="menu device-menu" />
+        <i class="fas fa-bars menu"></i>
         <div class="body">
           <div class="main">
             <a class="device-control" href=""
@@ -68,7 +70,8 @@
 
     <div class="sensor rgb">
       <div class="top">
-        <div class="menu"><i class="fas fa-bars"></i></div>
+        <input type="checkbox" class="menu device-menu" />
+        <i class="fas fa-bars menu"></i>
         <div class="body">
           <div class="main">
             <div class="red">
@@ -97,7 +100,8 @@
 
     <div class="sensor button">
       <div class="top">
-        <div class="menu"><i class="fas fa-bars"></i></div>
+        <input type="checkbox" class="menu device-menu" />
+        <i class="fas fa-bars menu"></i>
         <div class="body">
           <div class="main">
             <i class="device-control far fa-hand-point-up"></i>
@@ -118,7 +122,8 @@
 
     <div class="sensor buzzer">
       <div class="top">
-        <div class="menu"><i class="fas fa-bars"></i></div>
+        <input type="checkbox" class="menu device-menu" />
+        <i class="fas fa-bars menu"></i>
         <div class="body">
           <div class="main">
             <a class="device-control" href=""
@@ -141,7 +146,8 @@
 
     <div class="sensor motor">
       <div class="top">
-        <div class="menu"><i class="fas fa-bars"></i></div>
+        <input type="checkbox" class="menu device-menu" />
+        <i class="fas fa-bars menu"></i>
         <div class="body device-with-options">
           <div class="main">
             <i th:id="${data.id}" class="fas fa-cog"></i>
@@ -165,7 +171,8 @@
 
     <div class="sensor ir">
       <div class="top">
-        <div class="menu"><i class="fas fa-bars"></i></div>
+        <input type="checkbox" class="menu device-menu" />
+        <i class="fas fa-bars menu"></i>
         <div class="body device-with-options">
           <div class="main">
             <i th:id="${data.id}" class="fas fa-broadcast-tower"></i>
@@ -189,7 +196,8 @@
 
     <div class="sensor matrix">
       <div class="top">
-        <div class="menu"><i class="fas fa-bars"></i></div>
+        <input type="checkbox" class="menu device-menu" />
+        <i class="fas fa-bars menu"></i>
         <div class="body device-with-options">
           <div class="main">
             <i th:id="${data.id}" class="fab fa-buromobelexperte"></i>
@@ -213,7 +221,8 @@
 
     <div class="sensor oled">
       <div class="top">
-        <div class="menu"><i class="fas fa-bars"></i></div>
+        <input type="checkbox" class="menu device-menu" />
+        <i class="fas fa-bars menu"></i>
         <div class="body device-with-options">
           <div class="main">
             <i th:id="${data.id}" class="fas fa-tv"></i>
@@ -237,7 +246,8 @@
 
     <div class="sensor barometer">
       <div class="top">
-        <div class="menu"><i class="fas fa-bars"></i></div>
+        <input type="checkbox" class="menu device-menu" />
+        <i class="fas fa-bars menu"></i>
         <div class="body">
           <div class="main">
             <div class="barv" th:text="${data.val1}">00.0</div>
